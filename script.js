@@ -65,23 +65,26 @@ const data = [
 ]
 
 
-
+let newList;
 
 function filterOfType() {
     let productType = prompt('По какому типу продуктов Вы хотите отфильтровать все продукты? (Выберите числа от 1 до 5)');
-    let newList = [];
+    newList = [];
     for (let i = 0; i < data.length; i++) {
         let {name, price, quantity, type} = data[i];
         if (type == productType) {
-
             (newList.push(data[i])) ;
         }
-
-
     }
+}
+
+
+function displayAll() {
     console.log(newList);
 }
 
 filterOfType()
+displayAll()
 filterOfType()
+displayAll()
 
