@@ -127,7 +127,7 @@ let newList;
 let productType;
 let i;
 
-function getProductType(){
+function getProductType() {
     productType = prompt('По какому типу продуктов Вы хотите отфильтровать все продукты? (Выберите числа от 1 до 5)');
 }
 
@@ -137,13 +137,12 @@ function displayAll() {
 
 function filterOfType(inputArray) {
     newList = [];
-    for ( i = 0; i < inputArray.length; i++) {
+    for (i = 0; i < inputArray.length; i++) {
         let {name, price, quantity, type} = inputArray[i];
-        if (type == productType) {
-            (newList.push(inputArray[i])) ;
-        }
+        if (type === Number(productType)) (newList.push(inputArray[i]));
     }
 }
+
 getProductType()
 filterOfType(korona)
 displayAll()
